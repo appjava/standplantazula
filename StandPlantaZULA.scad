@@ -28,11 +28,6 @@ translate([-350,0,0])
 linear_extrude(250)
 circle(d=15);
 
-//-y350
-translate([-350,350,0])
-linear_extrude(250)
-circle(d=15);
-
 //-x350y120
 translate([-350,120,0])
 linear_extrude(250)
@@ -47,14 +42,14 @@ linear_extrude(350)
 circle(d=15);
 
 //-90Y
-translate([0,350,250])
+translate([0,365,250])
 rotate([0,-90,0])
 color("purple", 1.0)
 linear_extrude(350)
 circle(d=15);
 
 //-90Y-90Z
-translate([0,0,250])
+translate([15,0,250])
 rotate([0,-90,-90])
 color("purple", 1.0)
 linear_extrude(350)
@@ -68,7 +63,7 @@ linear_extrude(350)
 circle(d=15);
 
 //-90Y-90Z
-translate([-175,-25,265])
+translate([-175,-25,262])
 rotate([0,-90,-90])
 color("purple", 1.0)
 linear_extrude(400)
@@ -116,32 +111,47 @@ color("red", 1.0)
 linear_extrude(120)
 circle(d=15);
 
+
 //Refuerzos
-translate([-175,350,120])
+translate([-175,350,135])
 rotate([0,-45,0])
 color("blue", 1.0)
-linear_extrude(185)
+linear_extrude(165)
 circle(d=15);
 
-translate([-175,350,175])
+translate([-190,350,175])
 rotate([0,-45,90])
 color("blue", 1.0)
 linear_extrude(125)
 circle(d=15);
 
-translate([-175,0,175])
+translate([-190,0,175])
 rotate([0,-45,-90])
 color("blue", 1.0)
 linear_extrude(125)
 circle(d=15);
 
-translate([-350,120,120])
+translate([-335,120,135])
 rotate([0,-45,-90])
 color("blue", 1.0)
-linear_extrude(185)
+linear_extrude(165)
 circle(d=15);
 
+translate([0,0,175])
+rotate([0,-45,-90])
+color("blue", 1.0)
+linear_extrude(105)
+circle(d=15);
+
+translate([0,350,175])
+rotate([0,-45,90])
+color("blue", 1.0)
+linear_extrude(105)
+circle(d=15);
+
+/*
 //Sombra
 translate([-375,-25,270])
 color("black", 0.5)
 cube([400,400,1]);
+*/
