@@ -28,6 +28,11 @@ translate([-350,0,0])
 linear_extrude(250)
 circle(d=15);
 
+//-y350
+translate([-350,350,0])
+linear_extrude(250)
+circle(d=15);
+
 //-x350y120
 translate([-350,120,0])
 linear_extrude(250)
