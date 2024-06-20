@@ -35,21 +35,21 @@ circle(d=15);
 
 //Techo
 //-90Y
-translate([0,0,250])
+translate([0,-15,235])
 rotate([0,-90,0])
 color("purple", 1.0)
 linear_extrude(350)
 circle(d=15);
 
 //-90Y
-translate([0,365,250])
+translate([0,365,235])
 rotate([0,-90,0])
 color("purple", 1.0)
 linear_extrude(350)
 circle(d=15);
 
 //-90Y-90Z
-translate([15,0,250])
+translate([15,0,220])
 rotate([0,-90,-90])
 color("purple", 1.0)
 linear_extrude(350)
@@ -82,7 +82,7 @@ color("red", 1.0)
 linear_extrude(350)
 circle(d=15);
 
-translate([0,350,120])
+translate([-15,350,120])
 rotate([0,-90,90])
 color("red", 1.0)
 linear_extrude(350)
