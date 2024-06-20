@@ -1,9 +1,13 @@
 //Parámetros
 dCol=12;
 hCol=250;
-hColI=250;
-hColII=280;
-lTecho=300;
+hColI=250; //x3
+hColII=270; //x3
+lTecho=300; //x3
+lMesa=400; //x4
+lRefuerzo=130; //x3
+
+{
 //Columnas
 //0
 linear_extrude(hColI)
@@ -36,35 +40,41 @@ circle(d=dCol);
 
 //Techo
 //I
-translate([0,-dCol,hCol-dCol])
+translate([1.5*dCol,-dCol,hColI-dCol])
 rotate([0,-90,0])
 color("purple", 1.0)
-linear_extrude(350)
+linear_extrude(lMesa)
 circle(d=dCol);
 
 //II
-translate([0,-dCol+120,hCol-dCol+30])
+translate([1.5*dCol,-dCol+120,hColII-dCol])
 rotate([0,-90,0])
 color("purple", 1.0)
-linear_extrude(350)
+linear_extrude(lMesa)
 circle(d=dCol);
 
 //A
-translate([-dCol,-2*dCol,hCol])
+translate([dCol,-2*dCol,hColI])
 rotate([0,-80,-90])
 color("purple", 1.0)
 linear_extrude(lTecho)
 circle(d=dCol);
 
 //B
-translate([-180,-2*dCol,hCol])
+translate([-180-dCol,-2*dCol,hColI-dCol])
+rotate([0,-80,-90])
+color("purple", 1.0)
+linear_extrude(lTecho)
+circle(d=dCol);
+//B
+translate([-180+dCol,-2*dCol,hColI-dCol])
 rotate([0,-80,-90])
 color("purple", 1.0)
 linear_extrude(lTecho)
 circle(d=dCol);
 
 //C
-translate([-360+dCol,-2*dCol,hCol])
+translate([-360+-dCol,-2*dCol,hColI])
 rotate([0,-80,-90])
 color("purple", 1.0)
 linear_extrude(lTecho)
@@ -72,84 +82,62 @@ circle(d=dCol);
 
 
 //Mesa
-translate([0,350,120])
-rotate([0,-90,0])
-color("red", 1.0)
-linear_extrude(175)
-circle(d=15);
-
-translate([-120,350,120])
-rotate([0,-90,90])
-color("red", 1.0)
-linear_extrude(350)
-circle(d=15);
-
-translate([-15,350,120])
-rotate([0,-90,90])
-color("red", 1.0)
-linear_extrude(350)
-circle(d=15);
-
-translate([0,0,120])
-rotate([0,-90,0])
-color("red", 1.0)
-linear_extrude(350)
-circle(d=15);
-
-translate([-120,120,120])
-rotate([0,-90,0])
-color("red", 1.0)
-linear_extrude(230)
-circle(d=15);
-
-translate([-350,0,120])
+translate([dCol,-1.5*dCol,120+dCol])
 rotate([0,-90,-90])
 color("red", 1.0)
-linear_extrude(120)
-circle(d=15);
+linear_extrude(145)
+circle(d=dCol);
 
-translate([-120,175,0])
+translate([2.6*dCol-lMesa/2,-1.5*dCol,120-dCol])
+rotate([0,-90,-90])
 color("red", 1.0)
-linear_extrude(120)
-circle(d=15);
+linear_extrude(145)
+circle(d=dCol);
 
+translate([0.7*dCol-lMesa/2,-1.5*dCol,120-dCol])
+rotate([0,-90,-90])
+color("red", 1.0)
+linear_extrude(145)
+circle(d=dCol);
+
+translate([1.5*dCol,-dCol,120])
+rotate([0,-90,0])
+color("red", 1.0)
+linear_extrude(lMesa)
+circle(d=dCol);
+
+translate([1.5*dCol,120-dCol,120])
+rotate([0,-90,0])
+color("red", 1.0)
+linear_extrude(lMesa)
+circle(d=dCol);
+
+translate([2.3*dCol-lMesa,-1.5*dCol,120+dCol])
+rotate([0,-90,-90])
+color("red", 1.0)
+linear_extrude(145)
+circle(d=dCol);
 
 //Refuerzos
-translate([-175,350,135])
-rotate([0,-45,0])
-color("blue", 1.0)
-linear_extrude(165)
-circle(d=15);
-
-translate([-190,350,175])
-rotate([0,-45,90])
-color("blue", 1.0)
-linear_extrude(125)
-circle(d=15);
-
-translate([-190,0,175])
+translate([0,120,200])
 rotate([0,-45,-90])
 color("blue", 1.0)
-linear_extrude(125)
-circle(d=15);
+linear_extrude(lRefuerzo)
+circle(d=dCol);
 
-translate([-335,120,135])
+translate([-180,120,200])
 rotate([0,-45,-90])
 color("blue", 1.0)
-linear_extrude(165)
-circle(d=15);
+linear_extrude(lRefuerzo)
+circle(d=dCol);
 
-translate([0,0,175])
+translate([-360,120,200])
 rotate([0,-45,-90])
 color("blue", 1.0)
-linear_extrude(105)
-circle(d=15);
+linear_extrude(lRefuerzo)
+circle(d=dCol);
 
-translate([0,350,175])
-rotate([0,-45,90])
-color("blue", 1.0)
-linear_extrude(105)
-circle(d=15);
+}
 
 /*
 //Sombra
