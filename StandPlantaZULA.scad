@@ -48,23 +48,23 @@ color(colorColumnas,1.0)
 linear_extrude(hColII)
 circle(d=dCol);
 
-//Techo
+//TECHO
 //I
-translate([1.5*dCol,-dCol,hColI-dCol])
+translate([1.5*dCol,-dCol,hColI-2*dCol])
 rotate([0,-90,0])
 color(colorTecho, 1.0)
 linear_extrude(lMesa)
 circle(d=dCol);
 
 //II
-translate([1.5*dCol,-dCol+120,hColII-dCol])
+translate([1.5*dCol,-dCol+120,hColII-2*dCol])
 rotate([0,-90,0])
 color(colorTecho, 1.0)
 linear_extrude(lMesa)
 circle(d=dCol);
 
 //A
-translate([dCol,-2*dCol,hColI])
+translate([dCol,-2*dCol,hColI-dCol])
 rotate([0,-80,-90])
 color(colorTecho, 1.0)
 linear_extrude(lTecho)
@@ -84,14 +84,14 @@ linear_extrude(lTecho)
 circle(d=dCol);
 
 //C
-translate([-360+-dCol,-2*dCol,hColI])
+translate([-360+-dCol,-2*dCol,hColI-dCol])
 rotate([0,-80,-90])
 color(colorTecho, 1.0)
 linear_extrude(lTecho)
 circle(d=dCol);
 
 
-//Mesa
+//MESA
 translate([dCol,-1.5*dCol,120+dCol])
 rotate([0,-90,-90])
 color(colorMesa, 1.0)
@@ -128,20 +128,20 @@ color(colorMesa, 1.0)
 linear_extrude(145)
 circle(d=dCol);
 
-//Refuerzos
-translate([0,120,200])
+//REFUERZOS
+translate([0,120,190])
 rotate([0,-45,-90])
 color(colorRefuerzo, 1.0)
 linear_extrude(lRefuerzo)
 circle(d=dCol);
 
-translate([-180,120,200])
+translate([-180,120,190])
 rotate([0,-45,-90])
 color(colorRefuerzo, 1.0)
 linear_extrude(lRefuerzo)
 circle(d=dCol);
 
-translate([-360,120,200])
+translate([-360,120,190])
 rotate([0,-45,-90])
 color(colorRefuerzo, 1.0)
 linear_extrude(lRefuerzo)
